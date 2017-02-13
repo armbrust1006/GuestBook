@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div>
+	<h2>[ 글쓰기 ]</h2>
 		<form action="write" method="post">
 			<table border="1">
 				<tr>
@@ -15,16 +16,16 @@
 					<td><input type="text" name="name"></td>
 				</tr>
 				<tr>
-					<td>이름</td>
-					<td><input type="text" name="name"></td>
+					<td>비밀번호</td>
+					<td><input type="password" name="password"></td>
 				</tr>
 				<tr>
 					<td>방명록</td>
-					<td><textarea rows="30" cols="20" name="content"></textarea></td>
+					<td><textarea rows="5" cols="20" name="content"></textarea></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" value="등록"><input
-						type="button" value="취소" onclick="location.href='list.jsp'"></td>
+						type="button" value="취소" onclick="location.href='list'"></td>
 				</tr>
 			</table>
 		</form>

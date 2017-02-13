@@ -1,6 +1,5 @@
 package global.sesoc.test5.repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -19,6 +18,26 @@ public class GuestBookRepository {
 	public List<GuestBook> findList() {
 		GuestBookDAO dao = sqlSession.getMapper(GuestBookDAO.class);
 		return dao.findList();
+	}
+
+	public int insert(GuestBook guest) {
+		GuestBookDAO dao = sqlSession.getMapper(GuestBookDAO.class);
+		return dao.insert(guest);
+	}
+
+	public int delete(GuestBook guest) {
+		GuestBookDAO dao = sqlSession.getMapper(GuestBookDAO.class);
+		return dao.delete(guest.getNum(), guest.getPassword());
+	}
+
+	public GuestBook findOne(int num, String password) {
+		GuestBookDAO dao = sqlSession.getMapper(GuestBookDAO.class);
+		return dao.findOne(num, password);
+	}
+
+	public int update(GuestBook guest) {
+		GuestBookDAO dao = sqlSession.getMapper(GuestBookDAO.class);
+		return dao.update(guest);
 	}
 
 }

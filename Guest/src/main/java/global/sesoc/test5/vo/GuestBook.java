@@ -1,8 +1,11 @@
 package global.sesoc.test5.vo;
 
+import java.util.Date;
+
 public class GuestBook {
 	private int num;
-	private String name, password, content, inputdate;
+	private String name, password, content;
+	private Date inputdate;
 
 	public GuestBook() {
 	}
@@ -39,11 +42,11 @@ public class GuestBook {
 		this.content = content;
 	}
 
-	public String getInputdate() {
+	public Date getInputdate() {
 		return inputdate;
 	}
 
-	public void setInputdate(String inputdate) {
+	public void setInputdate(Date inputdate) {
 		this.inputdate = inputdate;
 	}
 

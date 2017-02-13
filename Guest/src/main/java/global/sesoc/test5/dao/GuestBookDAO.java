@@ -7,11 +7,11 @@ import global.sesoc.test5.vo.GuestBook;
 public interface GuestBookDAO {
 	public List<GuestBook> findList();
 
-	public GuestBook findOne(int num);
+	public GuestBook findOne(int num, String password);
 
 	public int insert(GuestBook guest);
 
 	public int update(GuestBook guest);
 
-	public int delete(int num);
+	public int delete(int num, String password);
 }
